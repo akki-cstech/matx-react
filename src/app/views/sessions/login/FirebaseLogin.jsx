@@ -36,7 +36,7 @@ const FirebaseRoot = styled(FlexAlignCenter)(({ theme }) => ({
     padding: "32px 56px",
     flexDirection: "column",
     backgroundSize: "cover",
-    background: "#161c37 url(/assets/images/bg-3.png) no-repeat",
+    background: "#161c37 url(https://www.freeimageslive.co.uk/image/view/5940/_original) no-repeat",
     [theme.breakpoints.down("sm")]: { minWidth: 200 },
     "& img": { width: 32, height: 32 },
   },
@@ -108,41 +108,12 @@ const FirebaseLogin = () => {
     <FirebaseRoot>
       <Card className="card">
         <Grid container>
-          <Grid item sm={6} xs={12}>
-            <div className="cardLeft">
+          <Grid item xs={12}>
+            <Box px={8} pt={8}>
               <Logo>
-                <MatxLogo /> <span>MatX Pro</span>
+                <img src="https://www.imagesbazaar.com/images/logo%20svg.svg" style={{ width: "200px", height: "50px", background: "#000", padding: 10, margin: "auto" }} alt="logo" />
               </Logo>
-
-              <h1 className="mainTitle">Admin Dashboard</h1>
-
-              <div className="features">
-                <div className="item">JWT, Firebase & Auth0 Authentication</div>
-                <div className="item">Clean & Organised code</div>
-                <div className="item">Limitless Pages & Components</div>
-              </div>
-
-              <Span sx={{ flexGrow: 1 }}></Span>
-
-              <a href="https://ui-lib.com/" target="_blank" rel="noopener noreferrer">
-                <img src="/assets/images/logos/ui-lib.png" alt="UI Lib Logo" />
-              </a>
-            </div>
-          </Grid>
-
-          <Grid item sm={6} xs={12}>
-            <Box px={4} pt={4}>
-              <GoogleButton
-                fullWidth
-                variant="contained"
-                onClick={handleGoogleLogin}
-                startIcon={<img src="/assets/images/logos/google.svg" alt="google" />}
-              >
-                Sign In With Google
-              </GoogleButton>
             </Box>
-
-            <MatxDivider sx={{ mt: 3, px: 4 }} text="Or" />
 
             <Box p={4}>
               <Formik
@@ -212,16 +183,6 @@ const FirebaseLogin = () => {
                     >
                       Login
                     </LoadingButton>
-
-                    <Paragraph>
-                      Don't have an account?
-                      <NavLink
-                        to="/session/signup"
-                        style={{ color: theme.palette.primary.main, marginLeft: 5 }}
-                      >
-                        Register
-                      </NavLink>
-                    </Paragraph>
                   </form>
                 )}
               </Formik>
